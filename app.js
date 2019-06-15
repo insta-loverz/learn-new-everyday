@@ -21,7 +21,7 @@ app.use(cors());
 app.use(BodyParser.urlencoded({ extended: true }));
 dotenv.config();
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 
 (async () => {
   await connectDb();
@@ -40,7 +40,7 @@ app.get('/ping', async (req, res) => {
 });
 
 cron.schedule('*/20 * * * * ', () => {
-  request.get('http://localhost:4000/ping', () => 1);
+  request.get('http://localhost:8080/ping', () => 1);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${chalk.red(port)}!`));
