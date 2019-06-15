@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const url = 'mongodb://localhost:27017/instaMagic';
+const url = 'mongodb+srv://instaluv:instawillbedown@cluster0-nezgz.mongodb.net/test?retryWrites=true&w=majority';
 let db = null;
 
 async function connectDb() {
