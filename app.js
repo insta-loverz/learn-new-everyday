@@ -39,7 +39,7 @@ app.get('/ping', async (req, res) => {
   res.send('pong');
 });
 
-cron.schedule('*/2 * * * * ', () => {
+cron.schedule('*/20 * * * * ', () => {
   request.get('http://localhost:4000/ping', () => 1);
 });
 
